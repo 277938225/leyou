@@ -24,7 +24,6 @@ public class LeyouCorsConfiguration {
         config.addAllowedMethod("POST");
         config.addAllowedMethod("DELETE");
         config.addAllowedMethod("PATCH");
-        config.addAllowedMethod("PATCH2");
         // 4）允许的头信息
         config.addAllowedHeader("*");
         //2.添加映射路径，我们拦截一切请求
