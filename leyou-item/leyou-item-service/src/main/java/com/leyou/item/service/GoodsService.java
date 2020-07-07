@@ -56,7 +56,7 @@ public class GoodsService {
         Page<Object> objects = PageHelper.startPage(page, rows);
         //执行查询，获取spu集合
         List<Spu> spus = this.spuMapper.selectByExample(example);
-        PageInfo<spus> pageInfo = new PageInfo<spus>();
+        PageInfo<Spu> pageInfo = new PageInfo<Spu>();
         //spu结合转化
         List<SpuBo> spubos = spus.stream().map(spu -> {
             SpuBo spuBo = new SpuBo();
