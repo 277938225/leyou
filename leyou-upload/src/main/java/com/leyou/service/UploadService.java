@@ -40,7 +40,7 @@ public class UploadService {
             }
 
             // 保存到服务器
-            file.transferTo(new File("C:\\leyou\\images12312\\" + originalFilename));//目录文件夹需要先建立好，不然会报错
+            file.transferTo(new File("C:\\leyou\\images\\" + originalFilename));//目录文件夹需要先建立好，不然会报错
 
             // 生成url地址，返回
             return "http://image.leyou.com/" + originalFilename;
