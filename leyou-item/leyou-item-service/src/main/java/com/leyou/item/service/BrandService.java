@@ -48,7 +48,7 @@ public class BrandService {
      * @param brand
      * @param cids
      */
-    @Transactional
+    @Transactional//事务控制
     public void saveBrand(Brand brand, List<Long> cids) {
 
         // 先新增brand
@@ -58,5 +58,14 @@ public class BrandService {
         cids.forEach(cid -> {
             this.brandMapper.insertBrandAndCategory(cid, brand.getId());
         });
+    }
+
+    /**
+     * 根据分类的id 查询品牌列表
+     * @param cid
+     * @return
+     */
+    public List<Brand> queryBrandsByCid(Long cid) {
+        return this.brandMapper.selectBrandByCid(cid);
     }
 }
